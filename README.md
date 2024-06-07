@@ -1,32 +1,30 @@
-# Infusion pump
+# Liquid Drug Dispensing Device Using Arduino
 
-## Description
-This project implements a water flow meter with an integrated pump control mechanism. It measures the flow rate of water and controls a pump accordingly. The system utilizes an Arduino board, a flow sensor,ultrasound sensor and a relay module to achieve this functionality.
-
-## Features
-- **Flow Measurement:** The flow sensor calculates the flow rate of water passing through it in liters per hour (L/hour).
-- **LCD Display:** An LCD screen is used to display the current flow rate measured by the sensor.
-- **Pump Control:** A relay module controls the operation of the pump based on the measured flow rate. The pump is turned on for a specified duration when needed and turned off when pumping specific volume guiding by the ultrasound sensor.
-- **Real-time Monitoring:** Flow rate data is continuously updated and displayed on the LCD screen.
+## Overview
+This project involves designing a liquid drug dispensing device using an Arduino microcontroller. The main functions of the device are to control and monitor the volume of the liquid drug being dispensed, detect air bubbles in the drug, and alert the user when the drug volume is low. The device will display both the pre-set and sensed parameters on an LCD screen. 
 
 ## Components
-- Arduino board
-- Water pump
-- Flow sensor (YF-S201)
-- Relay module
-- ultrasound sensor
-- Liquid Crystal Display (LCD)
-- Connecting wires
+- **Arduino Board**: The central microcontroller used to manage all sensors and control logic.
+- **IR Sensor**: Used to detect air bubbles in the liquid drug.
+- **Ultrasonic Sensor**: Used to measure the volume of the liquid drug and trigger an alarm when the volume is low.
+- **Flow Meter Sensor**: Used to measure the flow rate of the liquid drug.
+- **LCD Display**: Used to display the flow rate and the volume of the liquid drug.
+- **Buzzer/Alarm**: Used to alert the user when air bubbles are detected or when the drug volume is low.
 
-## Setup
-1. Connect the flow sensor to the Arduino board according to the wiring diagram.
-2. Connect the relay module to the Arduino board to control the pump.
-3. Upload the provided Arduino sketch to the board.
-4. Power on the system and monitor the flow rate on the LCD display.
+
 
 ## Usage
-1. The system will continuously monitor the flow rate of water passing through the sensor.
-2. The LCD screen will display the current flow rate in liters per hour (L/hour).
-3. Based on the flow rate, the pump will be turned on for a specified duration to maintain the desired flow rate.
-4. Adjustments to the pump operation can be made by modifying the Arduino sketch.
+1. **Power On**: Connect the Arduino to a power source.
+2. **Initialize**: The device will initialize and display "Flow Rate:" and "Volume:" on the LCD.
+3. **Monitoring**: The device will continuously monitor the flow rate, volume, and detect air bubbles.
+4. **Alerts**: If air bubbles are detected, the buzzer will sound an alarm. Similarly, if the volume goes below the set threshold, an alarm will be triggered.
 
+## Calibration
+- Adjust the `volumeThreshold` and flow rate calculation as per the actual device specifications.
+- Ensure all sensors are correctly calibrated and tested before use.
+
+
+## Troubleshooting
+- **No Display on LCD**: Check connections and ensure the LCD is properly initialized.
+- **No Alarm Sound**: Verify the buzzer connections and ensure the correct digital pin is used.
+- **Incorrect Flow Rate or Volume Readings**: Calibrate the sensors and verify the measurement logic in the code.
