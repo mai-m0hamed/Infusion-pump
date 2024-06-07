@@ -1,12 +1,12 @@
-# Water Flow Meter with Pump Control Readme
+# Infusion pump
 
 ## Description
-This project implements a water flow meter with an integrated pump control mechanism. It measures the flow rate of water and controls a pump accordingly. The system utilizes an Arduino board, a flow sensor, and a relay module to achieve this functionality.
+This project implements a water flow meter with an integrated pump control mechanism. It measures the flow rate of water and controls a pump accordingly. The system utilizes an Arduino board, a flow sensor,ultrasound sensor and a relay module to achieve this functionality.
 
 ## Features
 - **Flow Measurement:** The flow sensor calculates the flow rate of water passing through it in liters per hour (L/hour).
 - **LCD Display:** An LCD screen is used to display the current flow rate measured by the sensor.
-- **Pump Control:** A relay module controls the operation of the pump based on the measured flow rate. The pump is turned on for a specified duration when needed.
+- **Pump Control:** A relay module controls the operation of the pump based on the measured flow rate. The pump is turned on for a specified duration when needed and turned off when pumping specific volume guiding by the ultrasound sensor.
 - **Real-time Monitoring:** Flow rate data is continuously updated and displayed on the LCD screen.
 
 ## Components
@@ -14,6 +14,7 @@ This project implements a water flow meter with an integrated pump control mecha
 - Water pump
 - Flow sensor (YF-S201)
 - Relay module
+- ultrasound sensor
 - Liquid Crystal Display (LCD)
 - Connecting wires
 
@@ -29,16 +30,3 @@ This project implements a water flow meter with an integrated pump control mecha
 3. Based on the flow rate, the pump will be turned on for a specified duration to maintain the desired flow rate.
 4. Adjustments to the pump operation can be made by modifying the Arduino sketch.
 
-## Circuit Diagram
-![Pump Diagram](pump.png)
-![Flow sensor Diagram](sensor.png)
-
-## Dependencies
-- Arduino IDE
-- LiquidCrystal library
-
-## Contributing
-Contributions, bug reports, and feature requests are welcome. Please follow the contribution guidelines.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
